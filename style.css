@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(10, 39, 64);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav .left {
+    text-shadow: 3px 3px 7px rgba(207, 195, 27, 0.5);
+    box-shadow: 3px 3px 7px rgba(179, 168, 224, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: rgb(22, 46, 79);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 25px;
+}
+
+nav ul li a {
+    position: relative;
+    padding: 4px 20px;
+    text-decoration: none;
+    color: rgb(121, 207, 215);
+    font-size: 1rem;
+    transition: color 0.3s , background 0.3s, box-shadow 0.3s;
+    border-radius: 6px;
+    background-color: rgb(51, 79, 103);
+    box-shadow: 0 2px 4px rgba(31, 210, 227, 0.1);
+    backdrop-filter: blur(5px);
+    background-color: rgba(42, 58, 75, 0.6);
+
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgb(31, 210, 227), rgb(255, 0, 255));
+    transition: width 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 0, 255);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.left {
+    font-size: 1.7rem;
+}
+
+.first {
+    display: flex;
+    justify-content: space-around;
+    margin: 90px 0;
+    align-items: center;
+}
+
+.first>div {
+    width: 30%;
+}
+
+.leftsection {
+    background-color: none;
+    font-size: 2.6rem;
+}
+
+.rightsection img {
+    background-color: none;
+    width: 90%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.purple {
+    color: rgb(255, 0, 255);
+}
+
+#element {
+    color: rgb(178, 98, 225);
+    background-repeat: repeat;
+}
+
+.secondsection {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    background: rgba(22, 46, 79, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(31, 210, 227, 0.12);
+}
+
+.secondsection h1 {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+    color: rgb(31, 210, 227);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.secondsection .grey {
+    display: block;
+    text-align: center;
+    color: rgb(147, 227, 236);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.experience-row {
+    display: flex;
+    align-items: center;
+    background: rgba(10, 39, 64, 0.7);
+    border-radius: 10px;
+    margin: 18px 0;
+    padding: 18px 24px;
+    box-shadow: 0 2px 8px rgba(31, 210, 227, 0.08);
+}
+
+.horizontal {
+    height: 60px;
+    width: 4px;
+    background: linear-gradient(180deg, rgb(31, 210, 227), rgb(255, 0, 255));
+    margin-right: 30px;
+    border-radius: 2px;
+}
+
+.experience-details .role {
+    font-weight: bold;
+    color: rgb(255, 0, 255);
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+.experience-details .desc {
+    color: rgb(147, 227, 236);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+hr {
+    margin: auto;
+    width: 80%;
+    height: 1px;
+    background-color: rgb(31, 210, 227);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(32, 57, 92);
+    color: rgb(121, 207, 215);
+    padding: 0 40px;
+    font-size: 1rem;
+}
+
+.footer a::after {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgb(31, 210, 227), rgb(255, 0, 255));
+    display: block;
+    transition: width 0.3s, opacity 0.3s;
+}
+
+.footer a:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+.footer>div {
+    flex: 1;
+    text-align: center;
+}
+
+.footer a {
+    color: rgb(121, 207, 215);
+    text-decoration: none;
+    margin: 0 12px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer a:hover {
+    color: rgb(255, 0, 255);
+    transform: scale(1.50);
+    will-change: transform;
+}
+
+@media (max-width: 900px) {
+    .first {
+        flex-direction: column;
+        margin: 40px 0;
+    }
+    .first > div {
+        width: 90%;
+        margin-bottom: 24px;
+    }
+    .rightsection img {
+        width: 100%;
+    }
+    nav ul {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+    nav .left {
+        margin-bottom: 12px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .secondsection {
+        padding: 18px 8px;
+    }
+}
