@@ -237,6 +237,7 @@ hr {
     .first > div {
         width: 100%;
         margin-bottom: 24px;
+        margin-left: 20px;
     }
     .rightsection img {
         width: 100%;
